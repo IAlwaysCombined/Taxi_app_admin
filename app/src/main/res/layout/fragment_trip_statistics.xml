@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.StaticFragment">
+    tools:context=".ui.fragments.TripStatisticsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/driver"
+        android:id="@+id/statistics_rides_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_static"
-        />
+        tools:listitem="@layout/item_statistics" />
 </androidx.constraintlayout.widget.ConstraintLayout>

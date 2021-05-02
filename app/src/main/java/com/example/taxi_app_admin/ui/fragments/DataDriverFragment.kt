@@ -1,13 +1,29 @@
 package com.example.taxi_app_admin.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.taxi_app_admin.R
+import com.example.taxi_app_admin.databinding.FragmentDataDriverBinding
 
 
 class DataDriverFragment : Fragment(R.layout.fragment_data_driver) {
+
+    private lateinit var binding: FragmentDataDriverBinding
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentDataDriverBinding.bind(view)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        initRecyclerView()
+    }
+
+    //Initialize recycler view element
+    private fun initRecyclerView(){
+
+    }
 
 }

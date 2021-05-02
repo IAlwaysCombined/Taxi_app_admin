@@ -7,11 +7,10 @@
     tools:context=".ui.fragments.OrderFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/driver"
+        android:id="@+id/order_create_driver_account_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_order"
-        />
+        tools:listitem="@layout/item_order"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

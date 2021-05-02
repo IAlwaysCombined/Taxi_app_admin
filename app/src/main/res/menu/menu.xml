@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/stat"
-        android:icon="@drawable/ic_baseline_data_usage_24"
-        android:title="Статистика"
-        />
+        android:id="@+id/trip_statistics"
+        android:icon="@drawable/ic_usage"
+        android:title="@string/menu_item_statistics"/>
 
     <item
         android:id="@+id/data_driver"
-        android:icon="@drawable/ic_baseline_accessibility_24"
-        android:title="Данные водителей"
-        />
+        android:icon="@drawable/ic_accessibility"
+        android:title="@string/menu_item_data_driver"/>
 
     <item
-        android:id="@+id/order"
-        android:icon="@drawable/ic_baseline_list_24"
-        android:title="Заявки"
-        />
+        android:id="@+id/order_create_driver_account"
+        android:icon="@drawable/ic_baseline_list"
+        android:title="@string/menu_item_order_create_driver_account"/>
 </menu>
