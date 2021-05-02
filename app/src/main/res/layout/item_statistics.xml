@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         style="@style/card_view_driver_card_style"
         android:layout_width="match_parent"
-        android:layout_height="470dp"
+        android:layout_height="500dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -204,6 +204,27 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coast_ride_ride_item" />
+
+            <TextView
+                android:id="@+id/pay_method_ride_item_ride_description"
+                style="@style/description_diver_data_text_view_style"
+                android:text="@string/pay_method_user_item_description_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coast_ride_ride_item" />
+
+            <TextView
+                android:id="@+id/pay_method_ride_ride_item"
+                style="@style/diver_data_text_view_style"
+                android:text="Google pay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pay_method_ride_item_ride_description" />
+
+            <View
+                style="@style/under_line_view_style"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pay_method_ride_ride_item" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/driver_image_ride"
