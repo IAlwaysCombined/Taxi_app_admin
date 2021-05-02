@@ -6,10 +6,9 @@ import android.text.TextUtils
 import com.example.taxi_app_admin.MainActivity
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.databinding.ActivityAuthBinding
-import com.example.taxi_app_admin.utilites.AUTH
-import com.example.taxi_app_admin.utilites.replaceActivity
-import com.example.taxi_app_admin.utilites.replaceFragment
-import com.example.taxi_app_admin.utilites.showToast
+import com.example.taxi_app_admin.models.CommonModel
+import com.example.taxi_app_admin.ui.fragments.RideStatisticsFragment
+import com.example.taxi_app_admin.utilites.*
 
 class AuthActivity : AppCompatActivity() {
 
@@ -23,6 +22,7 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        initUser()
         binding.authBtnEnter.setOnClickListener { changeLoginAndPassword() }
     }
 

@@ -10,7 +10,7 @@ import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.models.CommonModel
 import com.example.taxi_app_admin.utilites.downloadAndSetImage
 
-class DriverDataAdapter(private var mOrderList: MutableList<CommonModel>): RecyclerView.Adapter<DriverDataAdapter.DriverViewHolder>() {
+class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): RecyclerView.Adapter<DriverDataAdapter.DriverViewHolder>() {
 
     class DriverViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //Driver data
@@ -31,19 +31,19 @@ class DriverDataAdapter(private var mOrderList: MutableList<CommonModel>): Recyc
     }
 
     override fun onBindViewHolder(holder: DriverViewHolder, position: Int) {
-        holder.nameDriver?.text = mOrderList[position].name_driver
-        holder.lastNameDriver?.text = mOrderList[position].last_name_driver
-        holder.surnameDriver?.text = mOrderList[position].surname_driver
-        holder.phoneNumberDriver?.text = mOrderList[position].phone_number_driver
-        holder.carNumberDriver?.text = mOrderList[position].car_number
-        holder.carDriver?.text = mOrderList[position].car
-        holder.photoDriver?.downloadAndSetImage(mOrderList[position].photo_driver)
+        holder.nameDriver?.text = mDriverList[position].name_driver
+        holder.lastNameDriver?.text = mDriverList[position].last_name_driver
+        holder.surnameDriver?.text = mDriverList[position].surname_driver
+        holder.phoneNumberDriver?.text = mDriverList[position].phone_number_driver
+        holder.carNumberDriver?.text = mDriverList[position].car_number
+        holder.carDriver?.text = mDriverList[position].car
+        holder.photoDriver?.downloadAndSetImage(mDriverList[position].photo_driver)
     }
 
-    override fun getItemCount() = mOrderList.size
+    override fun getItemCount() = mDriverList.size
 
     fun setList(list: List<CommonModel>){
-        mOrderList = list as MutableList<CommonModel>
+        mDriverList = list as MutableList<CommonModel>
         notifyDataSetChanged()
     }
 }

@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_order" />
     <fragment
         android:id="@+id/tripStatisticsFragment"
-        android:name="com.example.taxi_app_admin.ui.fragments.TripStatisticsFragment"
+        android:name="com.example.taxi_app_admin.ui.fragments.RideStatisticsFragment"
         android:label="fragment_trip_statistics"
-        tools:layout="@layout/fragment_trip_statistics" />
+        tools:layout="@layout/fragment_ride_statistics" />
 </navigation>

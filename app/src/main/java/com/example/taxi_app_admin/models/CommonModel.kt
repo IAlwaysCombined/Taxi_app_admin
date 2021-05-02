@@ -1,6 +1,7 @@
 package com.example.taxi_app_admin.models
 
 data class CommonModel (
+    val id: String = "",
     val name_driver: String = "",
     val last_name_driver: String = "",
     val surname_driver: String = "",
@@ -10,4 +11,12 @@ data class CommonModel (
     val photo_driver: String = "empty",
     val photo_car_driver: String = "",
     val photo_license_driver: String = "",
+
+    val name_user: String = "",
+    val last_name_user: String = "",
+    val surname_user: String = "",
+    val phone_number_user: String = "",
+
+    val coast_ride: String = "",
+    val pay_method: String = "",
 )
