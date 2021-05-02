@@ -61,8 +61,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[PHONE_NUMBER] = mOrderList[position].phone_number_driver
 
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
-            showToast(mOrderList[position].uid)
-            showToast(context.getString(R.string.drivrt_created_toast))
+            showToast(APP_ACTIVITY.getString(R.string.drivrt_created_toast))
             REF_DATABASE_ROOT.child(NODE_ORDER_DRIVERS).child(mOrderList[position].uid).removeValue()
         }
 
