@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/stat"
+        android:icon="@drawable/ic_baseline_data_usage_24"
+        android:title="Статистика"
+        />
+
+    <item
+        android:id="@+id/data_driver"
+        android:icon="@drawable/ic_baseline_accessibility_24"
+        android:title="Данные водителей"
+        />
+
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="Заявки"
+        />
+</menu>
