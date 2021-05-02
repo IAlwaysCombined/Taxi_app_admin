@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.OrderFragment">
+    tools:context=".ui.fragments.OrderFragment"
+    android:background="@color/light_gray">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/order_create_driver_account_recycler_view"

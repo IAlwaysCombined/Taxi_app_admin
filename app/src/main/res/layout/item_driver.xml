@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/light_gray">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         style="@style/card_view_driver_card_style"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="320dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -17,76 +16,85 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/name_driver_item_description"
-                style="@style/description_diver_data_text_view_style"
-                android:text="@string/name_driver_item_description_text_view"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/name_driver_item"
-                style="@style/diver_data_text_view_style"
-                android:text="Владисла"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@id/name_driver_item_description" />
-
-            <View
-                style="@style/under_line_view_style"
+            <LinearLayout
+                android:id="@+id/main_liner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@+id/name_driver_item" />
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/last_name_driver_item_description"
-                style="@style/description_diver_data_text_view_style"
-                android:text="@string/last_name_driver_item_description_text_view"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@id/name_driver_item" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/last_name_driver_item"
-                style="@style/diver_data_text_view_style"
-                android:text="Прокофьев"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@id/last_name_driver_item_description" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/driver_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="20dp"
+                        android:src="@mipmap/ic_launcher" />
 
-            <View
-                style="@style/under_line_view_style"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@+id/last_name_driver_item" />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/surname_driver_item_description"
-                style="@style/description_diver_data_text_view_style"
-                android:text="@string/surname_driver_item_description_text_view"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@id/last_name_driver_item" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/surname_driver_item"
-                style="@style/diver_data_text_view_style"
-                android:text="Андреевич"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@id/surname_driver_item_description" />
+                    <TextView
+                        android:id="@+id/name_driver_item_description"
+                        style="@style/description_diver_data_text_view_style"
+                        android:text="@string/name_driver_item_description_text_view" />
 
-            <View
-                style="@style/under_line_view_style"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/driver_image"
-                app:layout_constraintTop_toBottomOf="@+id/surname_driver_item" />
+                    <TextView
+                        android:id="@+id/name_driver_item"
+                        style="@style/driver_data_text_view_style"
+                        android:text="Владислав" />
+
+                    <View style="@style/under_line_view_style" />
+
+                    <TextView
+                        android:id="@+id/last_name_driver_item_description"
+                        style="@style/description_diver_data_text_view_style"
+                        android:text="@string/last_name_driver_item_description_text_view" />
+
+                    <TextView
+                        android:id="@+id/last_name_driver_item"
+                        style="@style/driver_data_text_view_style"
+                        android:text="Прокофьев" />
+
+                    <View style="@style/under_line_view_style" />
+
+                    <TextView
+                        android:id="@+id/surname_driver_item_description"
+                        style="@style/description_diver_data_text_view_style"
+                        android:text="@string/surname_driver_item_description_text_view" />
+
+                    <TextView
+                        android:id="@+id/surname_driver_item"
+                        style="@style/driver_data_text_view_style"
+                        android:text="Андреевич" />
+
+                    <View style="@style/under_line_view_style" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/phone_number_driver_item_description"
                 style="@style/description_diver_data_text_view_style"
                 android:text="@string/phone_number_driver_item_description_text_view"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/surname_driver_item" />
+                app:layout_constraintTop_toBottomOf="@id/main_liner_layout" />
 
             <TextView
                 android:id="@+id/phone_number_driver_item"
-                style="@style/diver_data_text_view_style"
+                style="@style/driver_data_text_view_style"
                 android:text="+380444618061"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone_number_driver_item_description" />
@@ -96,11 +104,11 @@
                 style="@style/description_diver_data_text_view_style"
                 android:text="@string/car_number_driver_item_description_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/surname_driver_item" />
+                app:layout_constraintTop_toBottomOf="@id/main_liner_layout" />
 
             <TextView
                 android:id="@+id/car_number_driver_item"
-                style="@style/diver_data_text_view_style"
+                style="@style/driver_data_text_view_style"
                 android:text="АК9265АК"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/car_number_driver_item_description" />
@@ -121,7 +129,7 @@
 
             <TextView
                 android:id="@+id/car_driver_item"
-                style="@style/diver_data_text_view_style"
+                style="@style/driver_data_text_view_style"
                 android:text="Audi A4 (B8)"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/car_driver_item_description" />
@@ -132,17 +140,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/car_driver_item" />
-
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/driver_image"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_margin="20dp"
-                android:src="@mipmap/ic_launcher"
-                app:civ_border_width="2dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -19,4 +19,6 @@
     <string name="phone_number_user_item_description_text_view">Номер телефона клиена</string>
     <string name="coast_ride_user_item_description_text_view">Цена поездки</string>
     <string name="pay_method_user_item_description_text_view">Способ оплаты</string>
+    <string name="add_order_driver_btn_text">Добавить</string>
+    <string name="delete_order_driver_btn_text">Удалить</string>
 </resources>
