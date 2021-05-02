@@ -18,6 +18,16 @@ const val NODE_DRIVERS = "driver"
 const val NODE_ADMIN = "admin"
 const val NODE_RIDES = "rides"
 
+//Child object
+const val NAME_DRIVER = "name_driver"
+const val LAST_NAME_DRIVER = "last_name_driver"
+const val CAR = "car"
+const val CAR_NUMBER = "car_number"
+const val SURNAME_DRIVER = "surname_driver"
+const val PHOTO_DRIVER = "photo_driver"
+const val PHONE_NUMBER = "phone_number"
+const val UID_DRIVER = "uid"
+
 //Const role
 const val ADMIN_ROLE = "admin"
 

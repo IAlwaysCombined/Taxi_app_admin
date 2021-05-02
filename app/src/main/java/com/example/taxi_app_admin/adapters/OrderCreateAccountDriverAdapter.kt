@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.models.CommonModel
-import com.example.taxi_app_admin.utilites.downloadAndSetImage
+import com.example.taxi_app_admin.utilites.*
 
 
 class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<CommonModel>): RecyclerView.Adapter<OrderCreateAccountDriverAdapter.OrderViewHolder>(){
@@ -48,11 +48,29 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
 
         holder.photoDriver?.downloadAndSetImage(mOrderList[position].photo_driver)
 
+        //Create driver
         holder.addDriver?.setOnClickListener {
+            val dateMap = mutableMapOf<String, Any>()
+            dateMap[NAME_DRIVER] = mOrderList[position].name_driver
+            dateMap[UID_DRIVER] = mOrderList[position].uid
+            dateMap[LAST_NAME_DRIVER] = mOrderList[position].last_name_driver
+            dateMap[SURNAME_DRIVER] = mOrderList[position].surname_driver
+            dateMap[PHOTO_DRIVER] = mOrderList[position].photo_driver
+            dateMap[CAR] = mOrderList[position].car
+            dateMap[CAR_NUMBER] = mOrderList[position].car_number
+            dateMap[PHONE_NUMBER] = mOrderList[position].phone_number_driver
 
+            REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
+            showToast(mOrderList[position].uid)
+            showToast(context.getString(R.string.drivrt_created_toast))
+            REF_DATABASE_ROOT.child(NODE_ORDER_DRIVERS).child(mOrderList[position].uid).removeValue()
         }
-        holder.deleteDriver?.setOnClickListener {
 
+        //Delete order
+        holder.deleteDriver?.setOnClickListener {
+            REF_DATABASE_ROOT.child(
+                NODE_ORDER_DRIVERS
+            ).child(mOrderList[position].uid).removeValue()
         }
     }
 
