@@ -1,5 +1,6 @@
 package com.example.taxi_app_admin.models
 
+//Common model
 data class CommonModel (
     val id: String = "",
     val uid: String = "",

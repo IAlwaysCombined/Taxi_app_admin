@@ -22,7 +22,7 @@ class DataDriverFragment : Fragment(R.layout.fragment_data_driver) {
     private lateinit var recyclerView: RecyclerView
     private lateinit var refOrders: DatabaseReference
     private lateinit var orderRequestListener: AppValueEventListener
-    private var orderRequestList = mutableListOf<CommonModel>()
+    private var dataRequestList = mutableListOf<CommonModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,8 +41,8 @@ class DataDriverFragment : Fragment(R.layout.fragment_data_driver) {
         refOrders = REF_DATABASE_ROOT.child(NODE_DRIVERS)
         recyclerView.adapter = adapter
         orderRequestListener = AppValueEventListener { dataSnapshot ->
-            orderRequestList = dataSnapshot.children.map { it.getCommonModel() } as MutableList<CommonModel>
-            adapter.setList(orderRequestList)
+            dataRequestList = dataSnapshot.children.map { it.getCommonModel() } as MutableList<CommonModel>
+            adapter.setList(dataRequestList)
             recyclerView.smoothScrollToPosition(adapter.itemCount)
         }
         refOrders.addValueEventListener(orderRequestListener)

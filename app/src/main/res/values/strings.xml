@@ -4,6 +4,7 @@
     <string name="menu_item_statistics">Статистика</string>
     <string name="menu_item_data_driver">Данные водителей</string>
     <string name="menu_item_order_create_driver_account">Заявки</string>
+    <string name="menu_item_other">Остальное</string>
     <!-- Card view driver card and order create account driver string -->
     <string name="name_driver_item_description_text_view">Имя водителя</string>
     <string name="last_name_driver_item_description_text_view">Фамилия водителя</string>
@@ -21,12 +22,15 @@
     <string name="pay_method_user_item_description_text_view">Способ оплаты</string>
     <string name="add_order_driver_btn_text">Добавить</string>
     <string name="delete_order_driver_btn_text">Удалить</string>
-    <string name="drivrt_created_toast">Водитель создан</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="driver_created_toast">Водитель создан</string>
+    <!-- toast -->
+    <string name="something_went_wrong_toast">Что-то пошло не так!</string>
+    <string name="email_edt_text_not_filled_toast">Заполните поле email</string>
+    <string name="password_edt_text_not_filled_toast">Заполните поле пароль</string>
+    <!-- btn text -->
     <string name="exit_btn_text">Выйти</string>
-    <string name="something_went_wrong">Что-то пошло не так!</string>
-    <string name="email_edt_text_not_filled">Заполните поле email</string>
-    <string name="password_edt_text_not_filled">Заполните поле пароль</string>
-    <string name="menu_item_other">Остальное</string>
+    <string name="auth_enter_btn_text">Войти</string>
+    <!-- text view text -->
+    <string name="auth_enter_email_text_view">Введите Email</string>
+    <string name="auth_enter_password_text_view">Введите Пароль</string>
 </resources>

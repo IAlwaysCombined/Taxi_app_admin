@@ -27,12 +27,13 @@ class AuthActivity : AppCompatActivity() {
         binding.authBtnEnter.setOnClickListener { changeLoginAndPassword() }
     }
 
+    //Change login, password, role user
     private fun changeLoginAndPassword() {
         if (TextUtils.isEmpty(binding.authEdtTextEmail.text.toString())) {
-            showToast(getString(R.string.email_edt_text_not_filled))
+            showToast(getString(R.string.email_edt_text_not_filled_toast))
             return
         } else if (TextUtils.isEmpty(binding.authEdtTextEmail.text.toString())) {
-            showToast(getString(R.string.password_edt_text_not_filled))
+            showToast(getString(R.string.password_edt_text_not_filled_toast))
             return
         }
         AUTH.signInWithEmailAndPassword(binding.authEdtTextEmail.text.toString(), binding.authEdtTextPassword.text.toString())
@@ -46,7 +47,7 @@ class AuthActivity : AppCompatActivity() {
                             replaceActivity(MainActivity())
                         }
                         else{
-                            showToast(getString(R.string.something_went_wrong))
+                            showToast(getString(R.string.something_went_wrong_toast))
                             AUTH.signOut()
                         }
                     }

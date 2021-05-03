@@ -9,23 +9,25 @@ import androidx.fragment.app.Fragment
 import com.example.taxi_app_admin.R
 import com.squareup.picasso.Picasso
 
+//Help fun toast
 fun showToast(message: String) {
     Toast.makeText(APP_ACTIVITY, message, Toast.LENGTH_SHORT).show()
 }
-
+//Replace fragment on activity
 fun AppCompatActivity.replaceFragment(fragment: Fragment) {
     supportFragmentManager.beginTransaction()
         .addToBackStack(null)
         .replace(R.id.main_container, fragment)
         .commit()
 }
-
+//Replace activity on activity
 fun AppCompatActivity.replaceActivity(activity: Activity) {
     val intent = Intent(this, activity::class.java)
     startActivity(intent)
     this.finish()
 }
 
+//Replace activity on fragment
 fun Fragment.replaceActivity(activity: Activity) {
     val intent = Intent(this.context, activity::class.java)
     startActivity(intent)

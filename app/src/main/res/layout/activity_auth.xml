@@ -8,9 +8,9 @@
 
     <TextView
         android:id="@+id/auth_text_view_description_email"
-        style="@style/driver_data_text_view_style"
+        style="@style/data_text_view_style"
         android:layout_marginStart="20dp"
-        android:text="Введите Email"
+        android:text="@string/auth_enter_email_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginVertical="120dp"/>
@@ -28,9 +28,9 @@
 
     <TextView
         android:id="@+id/auth_text_view_description_password"
-        style="@style/driver_data_text_view_style"
+        style="@style/data_text_view_style"
         android:layout_marginStart="20dp"
-        android:text="Введите Пароль"
+        android:text="@string/auth_enter_password_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/auth_edt_text_email" />
 
@@ -47,9 +47,9 @@
 
     <Button
         android:id="@+id/auth_btn_enter"
-        style="@style/btn_orders_driver_style"
+        style="@style/btn_style"
         android:layout_width="match_parent"
-        android:text="Войти"
+        android:text="@string/auth_enter_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_edt_text_password" />

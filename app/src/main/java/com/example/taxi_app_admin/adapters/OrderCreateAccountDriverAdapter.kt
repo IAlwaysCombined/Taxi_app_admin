@@ -1,7 +1,6 @@
 package com.example.taxi_app_admin.adapters
 
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -61,7 +60,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[PHONE_NUMBER] = mOrderList[position].phone_number_driver
 
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
-            showToast(APP_ACTIVITY.getString(R.string.drivrt_created_toast))
+            showToast(APP_ACTIVITY.getString(R.string.driver_created_toast))
             REF_DATABASE_ROOT.child(NODE_ORDER_DRIVERS).child(mOrderList[position].uid).removeValue()
         }
 

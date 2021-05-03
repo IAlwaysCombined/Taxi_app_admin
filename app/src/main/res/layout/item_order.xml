@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
-        style="@style/card_view_driver_card_style"
+        style="@style/card_view_style"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,36 +48,36 @@
 
                     <TextView
                         android:id="@+id/name_driver_order_item_description"
-                        style="@style/description_diver_data_text_view_style"
+                        style="@style/description_data_text_view_style"
                         android:text="@string/name_driver_item_description_text_view" />
 
                     <TextView
                         android:id="@+id/name_driver_order_item"
-                        style="@style/driver_data_text_view_style"
+                        style="@style/data_text_view_style"
                         android:text="Владислав" />
 
                     <View style="@style/under_line_view_style" />
 
                     <TextView
                         android:id="@+id/last_name_driver_order_item_description"
-                        style="@style/description_diver_data_text_view_style"
+                        style="@style/description_data_text_view_style"
                         android:text="@string/last_name_driver_item_description_text_view" />
 
                     <TextView
                         android:id="@+id/last_name_driver_order_item"
-                        style="@style/driver_data_text_view_style"
+                        style="@style/data_text_view_style"
                         android:text="Прокофьев" />
 
                     <View style="@style/under_line_view_style" />
 
                     <TextView
                         android:id="@+id/surname_driver_order_item_description"
-                        style="@style/description_diver_data_text_view_style"
+                        style="@style/description_data_text_view_style"
                         android:text="@string/surname_driver_item_description_text_view" />
 
                     <TextView
                         android:id="@+id/surname_driver_order_item"
-                        style="@style/driver_data_text_view_style"
+                        style="@style/data_text_view_style"
                         android:text="Андреевич" />
 
                     <View style="@style/under_line_view_style" />
@@ -88,28 +88,28 @@
 
             <TextView
                 android:id="@+id/phone_number_driver_order_item_description"
-                style="@style/description_diver_data_text_view_style"
+                style="@style/description_data_text_view_style"
                 android:text="@string/phone_number_driver_item_description_text_view"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/main_liner_layout" />
 
             <TextView
                 android:id="@+id/phone_number_driver_order_item"
-                style="@style/driver_data_text_view_style"
+                style="@style/data_text_view_style"
                 android:text="+380444618061"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone_number_driver_order_item_description" />
 
             <TextView
                 android:id="@+id/car_number_driver_order_item_description"
-                style="@style/description_diver_data_text_view_style"
+                style="@style/description_data_text_view_style"
                 android:text="@string/car_number_driver_item_description_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/main_liner_layout" />
 
             <TextView
                 android:id="@+id/car_number_driver_order_item"
-                style="@style/driver_data_text_view_style"
+                style="@style/data_text_view_style"
                 android:text="АК9265АК"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/car_number_driver_order_item_description" />
@@ -123,14 +123,14 @@
 
             <TextView
                 android:id="@+id/car_driver_order_item_description"
-                style="@style/description_diver_data_text_view_style"
+                style="@style/description_data_text_view_style"
                 android:text="@string/car_driver_item_description_text_view"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone_number_driver_order_item" />
 
             <TextView
                 android:id="@+id/car_driver_order_item"
-                style="@style/driver_data_text_view_style"
+                style="@style/data_text_view_style"
                 android:text="Audi A4 (B8)"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/car_driver_order_item_description" />
@@ -167,12 +167,12 @@
 
                 <Button
                     android:id="@+id/add_driver"
-                    style="@style/btn_orders_driver_style"
+                    style="@style/btn_style"
                     android:text="@string/add_order_driver_btn_text" />
 
                 <Button
                     android:id="@+id/delete_driver"
-                    style="@style/btn_orders_driver_style"
+                    style="@style/btn_style"
                     android:text="@string/delete_order_driver_btn_text" />
 
             </LinearLayout>
