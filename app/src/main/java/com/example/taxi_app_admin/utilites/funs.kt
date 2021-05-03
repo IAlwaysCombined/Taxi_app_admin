@@ -26,11 +26,17 @@ fun AppCompatActivity.replaceActivity(activity: Activity) {
     this.finish()
 }
 
+fun Fragment.replaceActivity(activity: Activity) {
+    val intent = Intent(this.context, activity::class.java)
+    startActivity(intent)
+}
+
+//Image view function
 fun ImageView.downloadAndSetImage(url: String) {
-    /* Функция раширения ImageView, скачивает и устанавливает картинку*/
     Picasso.get()
         .load(url)
         .fit()
         .placeholder(R.mipmap.ic_launcher)
         .into(this)
 }
+

@@ -20,4 +20,9 @@
         android:name="com.example.taxi_app_admin.ui.fragments.RideStatisticsFragment"
         android:label="fragment_trip_statistics"
         tools:layout="@layout/fragment_ride_statistics" />
+    <fragment
+        android:id="@+id/otherFragment"
+        android:name="com.example.taxi_app_admin.ui.fragments.OtherFragment"
+        android:label="fragment_other"
+        tools:layout="@layout/fragment_other" />
 </navigation>
