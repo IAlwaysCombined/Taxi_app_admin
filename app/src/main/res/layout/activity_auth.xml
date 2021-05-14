@@ -4,46 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_blue"
     tools:context=".activity.AuthActivity">
 
     <TextView
+        android:id="@+id/auth_text_view_description_auth"
+        style="@style/large_auth_text_view_style"
+        android:text="@string/auth_text_view_description_auth_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/auth_text_view_description_email"
-        style="@style/data_text_view_style"
-        android:layout_marginStart="20dp"
-        android:text="@string/auth_enter_email_text_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginVertical="120dp"/>
-
-    <EditText
-        android:id="@+id/auth_edt_text_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:inputType="text"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/auth_email_edt_text"
+        app:boxStrokeColor="@color/text_input_outline_color"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/auth_text_view_description_email"
-        tools:ignore="TextFields" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_text_view_description_auth"
+        app:startIconDrawable="@drawable/ic_account"
+        app:startIconTint="@color/white">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/auth_edt_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textImeMultiLine"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/auth_text_view_description_password"
-        style="@style/data_text_view_style"
-        android:layout_marginStart="20dp"
-        android:text="@string/auth_enter_password_text_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/auth_edt_text_email" />
-
-    <EditText
-        android:id="@+id/auth_edt_text_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/auth_password_edt_text"
+        app:boxStrokeColor="@color/text_input_outline_color"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/auth_text_view_description_password"
-        tools:ignore="TextFields" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_text_view_description_email"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/auth_edt_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textImeMultiLine|textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/auth_btn_enter"
@@ -52,6 +81,15 @@
         android:text="@string/auth_enter_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/auth_edt_text_password" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_text_view_description_password" />
+
+
+    <TextView
+        android:id="@+id/auth_text_view_restore_password"
+        style="@style/small_auth_text_view_style"
+        android:text="@string/auth_text_view_restore_password_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

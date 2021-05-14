@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         mAppDrawer.create()
         initFirebase()
         initAdmin()
+        initDriver()
         initFields()
     }
 

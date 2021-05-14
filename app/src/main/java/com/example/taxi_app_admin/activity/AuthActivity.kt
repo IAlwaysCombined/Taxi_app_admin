@@ -25,18 +25,36 @@ class AuthActivity : AppCompatActivity() {
         super.onStart()
         initAdmin()
         binding.authBtnEnter.setOnClickListener { changeLoginAndPassword() }
+        binding.authTextViewRestorePassword.setOnClickListener { restorePassword() }
+    }
+
+    //Restore password
+    private fun restorePassword() {
+        val emailAdmin = binding.authEdtTextEmail.text.toString()
+        if (emailAdmin.isEmpty()) {
+            showToast(getString(R.string.email_edt_text_not_filled_toast))
+            return
+        }
+        val emailAddress = binding.authEdtTextEmail.text.toString()
+        AUTH.sendPasswordResetEmail(emailAddress)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) showToast(getString(R.string.message_restore_password_send_toast))
+                else showToast(getString(R.string.something_went_wrong_toast))
+            }
     }
 
     //Change login, password, role user
     private fun changeLoginAndPassword() {
-        if (TextUtils.isEmpty(binding.authEdtTextEmail.text.toString())) {
+        val emailAdmin = binding.authEdtTextEmail.text.toString()
+        val passwordAdmin = binding.authEdtTextPassword.text.toString()
+        if (emailAdmin.isEmpty()) {
             showToast(getString(R.string.email_edt_text_not_filled_toast))
             return
-        } else if (TextUtils.isEmpty(binding.authEdtTextEmail.text.toString())) {
+        } else if (passwordAdmin.isEmpty()) {
             showToast(getString(R.string.password_edt_text_not_filled_toast))
             return
         }
-        AUTH.signInWithEmailAndPassword(binding.authEdtTextEmail.text.toString(), binding.authEdtTextPassword.text.toString())
+        AUTH.signInWithEmailAndPassword(emailAdmin, passwordAdmin)
             .addOnCompleteListener { task ->
                 val uid = AUTH.currentUser?.uid.toString()
                 REF_DATABASE_ROOT.child(NODE_ADMIN).child(uid)

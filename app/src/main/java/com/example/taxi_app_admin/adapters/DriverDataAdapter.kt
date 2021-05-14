@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.models.CommonModel
+import com.example.taxi_app_admin.utilites.COMMON
 import com.example.taxi_app_admin.utilites.downloadAndSetImage
 
 class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): RecyclerView.Adapter<DriverDataAdapter.DriverViewHolder>() {

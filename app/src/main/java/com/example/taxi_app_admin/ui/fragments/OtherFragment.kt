@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.activity.AuthActivity
 import com.example.taxi_app_admin.databinding.FragmentOtherBinding
-import com.example.taxi_app_admin.utilites.AUTH
-import com.example.taxi_app_admin.utilites.replaceActivity
+import com.example.taxi_app_admin.utilites.*
 
 
 class OtherFragment : Fragment(R.layout.fragment_other) {

@@ -41,7 +41,7 @@ class RideStatisticsAdapter(private var mRideList: MutableList<CommonModel>): Re
         holder.nameDriver?.text = mRideList[position].name_driver
         holder.lastNameDriver?.text = mRideList[position].last_name_driver
         holder.surnameDriver?.text = mRideList[position].surname_driver
-        holder.phoneNumberDriver?.text = mRideList[position].phone_number_driver
+        holder.phoneNumberDriver?.text = mRideList[position].phone_number
         holder.photoDriver?.downloadAndSetImage(mRideList[position].photo_driver)
 
         holder.nameUser?.text = mRideList[position].name_user

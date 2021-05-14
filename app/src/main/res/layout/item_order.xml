@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="580dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         style="@style/card_view_style"
@@ -115,6 +114,7 @@
                 app:layout_constraintTop_toBottomOf="@id/car_number_driver_order_item_description" />
 
             <View
+                android:id="@+id/view"
                 style="@style/under_line_view_style"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -143,18 +143,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/car_driver_order_item" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/image_driver_order_create_account_recycler_view"
+            <ImageView
+                android:id="@+id/car_driver_order_license"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:layout_margin="20dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/car_driver_order_item"
-                tools:listitem="@layout/item_image_orders" />
-
+                app:layout_constraintTop_toBottomOf="@+id/car_driver_order_item" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -163,16 +159,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/image_driver_order_create_account_recycler_view">
+                app:layout_constraintTop_toBottomOf="@id/car_driver_order_license">
 
                 <Button
                     android:id="@+id/add_driver"
                     style="@style/btn_style"
+                    android:textSize="12sp"
                     android:text="@string/add_order_driver_btn_text" />
 
                 <Button
                     android:id="@+id/delete_driver"
                     style="@style/btn_style"
+                    android:textSize="12sp"
                     android:text="@string/delete_order_driver_btn_text" />
 
             </LinearLayout>

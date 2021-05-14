@@ -31,6 +31,10 @@
     <string name="exit_btn_text">Выйти</string>
     <string name="auth_enter_btn_text">Войти</string>
     <!-- text view text -->
-    <string name="auth_enter_email_text_view">Введите Email</string>
-    <string name="auth_enter_password_text_view">Введите Пароль</string>
+    <string name="auth_text_view_description_auth_text">Авторизация</string>
+    <string name="auth_text_view_restore_password_text">Забыли пароль?</string>
+    <string name="message_restore_password_send_toast">Сообщение для изменения пароля отправлено!</string>
+    <string name="auth_email_edt_text">Email</string>
+    <string name="auth_password_edt_text">Пароль</string>
+    <string name="other_create_admin_description_text">Остальное</string>
 </resources>

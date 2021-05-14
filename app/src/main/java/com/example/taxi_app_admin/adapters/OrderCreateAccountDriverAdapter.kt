@@ -25,6 +25,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
 
         //Driver images
         val photoDriver: ImageView? = itemView.findViewById(R.id.driver_image_order_create_account)
+        val photoDriverLicense: ImageView? = itemView.findViewById(R.id.car_driver_order_license)
 
         //Buttons
         val addDriver: Button? = itemView.findViewById(R.id.add_driver)
@@ -44,7 +45,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
         holder.phoneNumberDriver?.text = mOrderList[position].phone_number_driver
         holder.carNumberDriver?.text = mOrderList[position].car_number
         holder.carDriver?.text = mOrderList[position].car
-
+        holder.photoDriverLicense?.downloadAndSetImage(mOrderList[position].photo_licence)
         holder.photoDriver?.downloadAndSetImage(mOrderList[position].photo_driver)
 
         //Create driver
@@ -55,9 +56,10 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[LAST_NAME_DRIVER] = mOrderList[position].last_name_driver
             dateMap[SURNAME_DRIVER] = mOrderList[position].surname_driver
             dateMap[PHOTO_DRIVER] = mOrderList[position].photo_driver
+            dateMap[PHOTO_LICENSE] = mOrderList[position].photo_licence
             dateMap[CAR] = mOrderList[position].car
             dateMap[CAR_NUMBER] = mOrderList[position].car_number
-            dateMap[PHONE_NUMBER] = mOrderList[position].phone_number_driver
+            dateMap[PHONE_NUMBER_DRIVER] = mOrderList[position].phone_number_driver
 
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
             showToast(APP_ACTIVITY.getString(R.string.driver_created_toast))
