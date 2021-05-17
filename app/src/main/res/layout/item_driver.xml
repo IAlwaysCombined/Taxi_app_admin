@@ -180,7 +180,7 @@
                     android:layout_width="120dp"
                     android:layout_height="50dp"
                     android:text="@string/bloc_driver_btn_text_drivers"
-                    android:textSize="10sp"
+                    android:textSize="9sp"
                     tools:ignore="SmallSp" />
 
                 <Button

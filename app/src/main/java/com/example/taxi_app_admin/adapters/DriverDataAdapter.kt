@@ -50,12 +50,26 @@ class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): Recy
             showToast(APP_ACTIVITY.getString(R.string.driver_deleted))
         }
         //Bloc driver
-        holder.blocDriver?.setOnClickListener {
-            val dateMap = mutableMapOf<String, Any>()
-            dateMap[CHILD_BLOC] = BLOCK
-            REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).updateChildren(dateMap)
-            showToast(APP_ACTIVITY.getString(R.string.driver_bloc))
+        if(mDriverList[position].bloc == BLOCK){
+            holder.blocDriver?.text = "Разблокировать"
+            holder.blocDriver?.setOnClickListener {
+                val dateMap = mutableMapOf<String, Any>()
+                dateMap[CHILD_BLOC] = UNBLOCK
+                REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).updateChildren(dateMap)
+                showToast(APP_ACTIVITY.getString(R.string.driver_bloc))
+            }
         }
+        else{
+            holder.blocDriver?.text = "Зблокировать"
+            holder.blocDriver?.setOnClickListener {
+                val dateMap = mutableMapOf<String, Any>()
+                dateMap[CHILD_BLOC] = BLOCK
+                REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).updateChildren(dateMap)
+                showToast(APP_ACTIVITY.getString(R.string.driver_bloc))
+            }
+        }
+
+
     }
 
     override fun getItemCount() = mDriverList.size
