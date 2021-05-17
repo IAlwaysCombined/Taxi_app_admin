@@ -3,6 +3,10 @@ package com.example.taxi_app_admin
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.taxi_app_admin.activity.AuthActivity
+import com.example.taxi_app_admin.database.AUTH
+import com.example.taxi_app_admin.database.initAdmin
+import com.example.taxi_app_admin.database.initDriver
+import com.example.taxi_app_admin.database.initFirebase
 import com.example.taxi_app_admin.databinding.ActivityMainBinding
 import com.example.taxi_app_admin.models.CommonModel
 import com.example.taxi_app_admin.ui.`object`.AppDrawer

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.activity.AuthActivity
+import com.example.taxi_app_admin.database.AUTH
 import com.example.taxi_app_admin.databinding.FragmentOtherBinding
 import com.example.taxi_app_admin.utilites.*
 

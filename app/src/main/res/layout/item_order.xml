@@ -164,13 +164,17 @@
                 <Button
                     android:id="@+id/add_driver"
                     style="@style/btn_style"
-                    android:textSize="12sp"
+                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:textSize="14sp"
                     android:text="@string/add_order_driver_btn_text" />
 
                 <Button
-                    android:id="@+id/delete_driver"
+                    android:id="@+id/delete_driver_order"
                     style="@style/btn_style"
-                    android:textSize="12sp"
+                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:textSize="14sp"
                     android:text="@string/delete_order_driver_btn_text" />
 
             </LinearLayout>

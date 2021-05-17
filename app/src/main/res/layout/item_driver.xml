@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="350dp">
+    android:layout_height="410dp">
 
     <androidx.cardview.widget.CardView
         style="@style/card_view_style"
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="380dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -135,11 +136,41 @@
                 app:layout_constraintTop_toBottomOf="@id/car_driver_item_description" />
 
             <View
-                android:layout_width="match_parent"
                 style="@style/under_line_view_style"
+                android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/car_driver_item" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/car_driver_item">
+
+                <Button
+                    android:id="@+id/bloc_driver"
+                    style="@style/btn_style"
+                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:textSize="10sp"
+                    android:text="@string/bloc_driver_btn_text_drivers"
+                    tools:ignore="SmallSp" />
+
+                <Button
+                    android:id="@+id/delete_driver"
+                    style="@style/btn_style"
+                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:textSize="12sp"
+                    android:text="@string/delete_order_driver_btn_text"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

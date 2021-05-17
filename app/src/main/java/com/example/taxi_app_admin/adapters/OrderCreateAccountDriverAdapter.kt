@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
+import com.example.taxi_app_admin.database.*
 import com.example.taxi_app_admin.models.CommonModel
 import com.example.taxi_app_admin.utilites.*
 
@@ -22,14 +23,12 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
         val phoneNumberDriver: TextView? = itemView.findViewById(R.id.phone_number_driver_order_item)
         val carNumberDriver: TextView? = itemView.findViewById(R.id.car_number_driver_order_item)
         val carDriver: TextView? = itemView.findViewById(R.id.car_driver_order_item)
-
         //Driver images
         val photoDriver: ImageView? = itemView.findViewById(R.id.driver_image_order_create_account)
         val photoDriverLicense: ImageView? = itemView.findViewById(R.id.car_driver_order_license)
-
         //Buttons
         val addDriver: Button? = itemView.findViewById(R.id.add_driver)
-        val deleteDriver: Button? = itemView.findViewById(R.id.delete_driver)
+        val deleteDriver: Button? = itemView.findViewById(R.id.delete_driver_order)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
@@ -60,7 +59,6 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[CAR] = mOrderList[position].car
             dateMap[CAR_NUMBER] = mOrderList[position].car_number
             dateMap[PHONE_NUMBER_DRIVER] = mOrderList[position].phone_number_driver
-
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
             showToast(APP_ACTIVITY.getString(R.string.driver_created_toast))
             REF_DATABASE_ROOT.child(NODE_ORDER_DRIVERS).child(mOrderList[position].uid).removeValue()
@@ -68,9 +66,8 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
 
         //Delete order
         holder.deleteDriver?.setOnClickListener {
-            REF_DATABASE_ROOT.child(
-                NODE_ORDER_DRIVERS
-            ).child(mOrderList[position].uid).removeValue()
+            REF_DATABASE_ROOT.child(NODE_ORDER_DRIVERS).child(mOrderList[position].uid).removeValue()
+            showToast(APP_ACTIVITY.getString(R.string.driver_order_deleted))
         }
     }
 

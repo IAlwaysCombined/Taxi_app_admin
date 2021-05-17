@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/light_blue"
     tools:context=".ui.fragments.OtherFragment">
 
     <TextView
         android:id="@+id/other_create_admin_description"
         style="@style/large_auth_text_view_style"
-        android:text="@string/other_create_admin_description_text"
+        android:text="@string/menu_item_other"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +18,6 @@
         android:id="@+id/other_exit_btn"
         style="@style/btn_style"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/exit_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

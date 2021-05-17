@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.adapters.OrderCreateAccountDriverAdapter
+import com.example.taxi_app_admin.database.NODE_ORDER_DRIVERS
+import com.example.taxi_app_admin.database.REF_DATABASE_ROOT
+import com.example.taxi_app_admin.database.getCommonModel
 import com.example.taxi_app_admin.databinding.FragmentOrderBinding
 import com.example.taxi_app_admin.models.CommonModel
 import com.example.taxi_app_admin.utilites.*
@@ -20,7 +23,6 @@ class OrderFragment : Fragment(R.layout.fragment_order) {
     private lateinit var refOrders: DatabaseReference
     private lateinit var orderRequestListener: AppValueEventListener
     private var orderRequestList = mutableListOf<CommonModel>()
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

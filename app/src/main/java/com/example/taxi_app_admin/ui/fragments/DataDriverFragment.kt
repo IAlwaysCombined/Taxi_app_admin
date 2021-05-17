@@ -6,12 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.adapters.DriverDataAdapter
+import com.example.taxi_app_admin.database.NODE_DRIVERS
+import com.example.taxi_app_admin.database.REF_DATABASE_ROOT
+import com.example.taxi_app_admin.database.getCommonModel
 import com.example.taxi_app_admin.databinding.FragmentDataDriverBinding
 import com.example.taxi_app_admin.models.CommonModel
 import com.example.taxi_app_admin.utilites.AppValueEventListener
-import com.example.taxi_app_admin.utilites.NODE_DRIVERS
-import com.example.taxi_app_admin.utilites.REF_DATABASE_ROOT
-import com.example.taxi_app_admin.utilites.getCommonModel
 import com.google.firebase.database.DatabaseReference
 
 
@@ -47,5 +47,4 @@ class DataDriverFragment : Fragment(R.layout.fragment_data_driver) {
         }
         refOrders.addValueEventListener(orderRequestListener)
     }
-
 }

@@ -1,15 +1,17 @@
 package com.example.taxi_app_admin.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.example.taxi_app_admin.MainActivity
 import com.example.taxi_app_admin.R
+import com.example.taxi_app_admin.database.*
 import com.example.taxi_app_admin.databinding.ActivityAuthBinding
-import com.example.taxi_app_admin.utilites.*
+import com.example.taxi_app_admin.utilites.replaceActivity
+import com.example.taxi_app_admin.utilites.showToast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import com.example.taxi_app_admin.database.ADMIN_ROLE as ADMIN_ROLE1
 
 class AuthActivity : AppCompatActivity() {
 
@@ -61,7 +63,7 @@ class AuthActivity : AppCompatActivity() {
                     .addValueEventListener(object: ValueEventListener{
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val roleUser = snapshot.child(CHILD_ROLE).value.toString()
-                        if(task.isSuccessful && roleUser == ADMIN_ROLE){
+                        if(task.isSuccessful && roleUser == ADMIN_ROLE1){
                             replaceActivity(MainActivity())
                         }
                         else{

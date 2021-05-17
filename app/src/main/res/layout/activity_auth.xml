@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
     tools:context=".activity.AuthActivity">
 
     <TextView
@@ -25,24 +24,17 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/auth_email_edt_text"
-        app:boxStrokeColor="@color/text_input_outline_color"
         app:endIconMode="clear_text"
-        app:endIconTint="@color/white"
-        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_text_view_description_auth"
-        app:startIconDrawable="@drawable/ic_account"
-        app:startIconTint="@color/white">
+        app:startIconDrawable="@drawable/ic_account">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/auth_edt_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textImeMultiLine"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            />
+            android:inputType="textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,23 +46,17 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/auth_password_edt_text"
-        app:boxStrokeColor="@color/text_input_outline_color"
         app:endIconMode="password_toggle"
-        app:endIconTint="@color/white"
-        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_text_view_description_email"
-        app:startIconDrawable="@drawable/ic_lock"
-        app:startIconTint="@color/white">
+        app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/auth_edt_text_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textImeMultiLine|textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:inputType="textImeMultiLine|textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 

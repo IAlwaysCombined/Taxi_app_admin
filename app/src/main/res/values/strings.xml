@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Taxi_app_admin</string>
+    <string name="app_name">"Сотка" приложение администратора</string>
     <!-- Menu item name -->
     <string name="menu_item_statistics">Статистика</string>
     <string name="menu_item_data_driver">Данные водителей</string>
@@ -14,27 +14,31 @@
     <string name="car_driver_item_description_text_view">Автомобль</string>
     <!-- Card view ride card string -->
     <string name="coast_ride_item_description_text_view">Цена поездки</string>
-    <string name="name_user_item_description_text_view">Имя клиена</string>
-    <string name="last_name_user_item_description_text_view">Фамилия клиена</string>
-    <string name="surname_user_item_description_text_view">Отчество клиена</string>
-    <string name="phone_number_user_item_description_text_view">Номер телефона клиена</string>
+    <string name="name_user_item_description_text_view">Имя клиента</string>
+    <string name="last_name_user_item_description_text_view">Фамилия клиента</string>
+    <string name="surname_user_item_description_text_view">Отчество клиента</string>
+    <string name="phone_number_user_item_description_text_view">Номер телефона клиента</string>
     <string name="coast_ride_user_item_description_text_view">Цена поездки</string>
     <string name="pay_method_user_item_description_text_view">Способ оплаты</string>
     <string name="add_order_driver_btn_text">Добавить</string>
     <string name="delete_order_driver_btn_text">Удалить</string>
     <string name="driver_created_toast">Водитель создан</string>
+    <string name="bloc_driver_btn_text_drivers">Заблокировать</string>
+    <string name="driver_order_deleted">Заявка удалена</string>
+    <string name="driver_deleted">Водитель удален</string>
+    <string name="driver_bloc">Водитель заблокирован</string>
     <!-- toast -->
     <string name="something_went_wrong_toast">Что-то пошло не так!</string>
     <string name="email_edt_text_not_filled_toast">Заполните поле email</string>
     <string name="password_edt_text_not_filled_toast">Заполните поле пароль</string>
     <!-- btn text -->
     <string name="exit_btn_text">Выйти</string>
-    <string name="auth_enter_btn_text">Войти</string>
+    <string name="auth_enter_code">Войти</string>
     <!-- text view text -->
     <string name="auth_text_view_description_auth_text">Авторизация</string>
     <string name="auth_text_view_restore_password_text">Забыли пароль?</string>
     <string name="message_restore_password_send_toast">Сообщение для изменения пароля отправлено!</string>
     <string name="auth_email_edt_text">Email</string>
     <string name="auth_password_edt_text">Пароль</string>
-    <string name="other_create_admin_description_text">Остальное</string>
+    <string name="auth_enter_btn_text">Войти</string>
 </resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Сотка" додаток адміністратора</string>
+    <!-- menu item name -->
+    <string name="menu_item_statistics">Статистика</string>
+    <string name="menu_item_data_driver">Дані водіїв</string>
+    <string name="menu_item_order_create_driver_account">Заявки</string>
+    <string name="menu_item_other">Інше</string>
+    <!-- card view driver card and order create account driver string -->
+    <string name="name_driver_item_description_text_view">Ім\я водія</string>
+    <string name="last_name_driver_item_description_text_view">Прізвище водія</string>
+    <string name="surname_driver_item_description_text_view">По батькові водія</string>
+    <string name="phone_number_driver_item_description_text_view">Номер телефону водія</string>
+    <string name="car_number_driver_item_description_text_view">Номер автомобіля</string>
+    <string name="car_driver_item_description_text_view">Автомобіль</string>
+    <!-- card view ride card string -->
+    <string name="coast_ride_item_description_text_view">Ціна поїздки</string>
+    <string name="name_user_item_description_text_view">Ім\я клієнта</string>
+    <string name="last_name_user_item_description_text_view">Прізвище клієнта</string>
+    <string name="surname_user_item_description_text_view">По батькові клієнта</string>
+    <string name="phone_number_user_item_description_text_view">Номер телефону Клієнта</string>
+    <string name="coast_ride_user_item_description_text_view">Ціна поїздки</string>
+    <string name="pay_method_user_item_description_text_view">Спосіб оплати</string>
+    <string name="add_order_driver_btn_text">Додавши</string>
+    <string name="delete_order_driver_btn_text">Видалити</string>
+    <string name="driver_created_toast">Водій створений</string>
+    <string name="bloc_driver_btn_text_drivers">Заблокувати</string>
+    <string name="driver_order_deleted">Заявка видалена</string>
+    <string name="driver_deleted">Водій видалений</string>
+    <string name="driver_bloc">Водій заблокований</string>
+    <!-- toast -->
+    <string name="something_went_wrong_toast">Щось пішло не так!</string>
+    <string name="email_edt_text_not_filled_toast">Заповніть поле email</string>
+    <string name="password_edt_text_not_filled_toast">Заповніть поле пароль</string>
+    <!-- btn text -->
+    <string name="exit_btn_text">Вийти</string>
+    <string name="auth_enter_code">Увійти</string>
+    <!-- text view text -->
+    <string name="auth_text_view_description_auth_text">Авторизація</string>
+    <string name="auth_text_view_restore_password_text">Забули пароль?</string>
+    <string name="message_restore_password_send_toast">Повідомлення для зміни пароля відправлено!</string>
+    <string name="auth_email_edt_text">Email</string>
+    <string name="auth_password_edt_text">Пароль</string>
+    <string name="auth_enter_btn_text">Увійти</string>
+</resources>

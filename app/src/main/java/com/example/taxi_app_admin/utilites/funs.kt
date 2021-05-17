@@ -26,13 +26,11 @@ fun AppCompatActivity.replaceActivity(activity: Activity) {
     startActivity(intent)
     this.finish()
 }
-
 //Replace activity on fragment
 fun Fragment.replaceActivity(activity: Activity) {
     val intent = Intent(this.context, activity::class.java)
     startActivity(intent)
 }
-
 //Image view function
 fun ImageView.downloadAndSetImage(url: String) {
     Picasso.get()
