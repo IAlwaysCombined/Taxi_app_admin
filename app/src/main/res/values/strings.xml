@@ -41,4 +41,5 @@
     <string name="auth_email_edt_text">Email</string>
     <string name="auth_password_edt_text">Пароль</string>
     <string name="auth_enter_btn_text">Войти</string>
+    <string name="block_driver_item_description_text_view">Статус</string>
 </resources>

@@ -23,6 +23,7 @@ class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): Recy
         val carNumberDriver: TextView? = itemView.findViewById(R.id.car_number_driver_item)
         val carDriver: TextView? = itemView.findViewById(R.id.car_driver_item)
         val blocDriver: Button? = itemView.findViewById(R.id.bloc_driver)
+        val statusDriver: TextView? = itemView.findViewById(R.id.block_driver_item)
         val deleteDriver: Button? = itemView.findViewById(R.id.delete_driver)
         //Photo driver
         val photoDriver: ImageView? = itemView.findViewById(R.id.driver_image)
@@ -42,6 +43,7 @@ class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): Recy
         holder.carNumberDriver?.text = mDriverList[position].car_number
         holder.carDriver?.text = mDriverList[position].car
         holder.photoDriver?.downloadAndSetImage(mDriverList[position].photo_driver)
+        holder.statusDriver?.text = mDriverList[position].bloc
         //Delete driver
         holder.deleteDriver?.setOnClickListener {
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).removeValue()
@@ -50,18 +52,9 @@ class DriverDataAdapter(private var mDriverList: MutableList<CommonModel>): Recy
         //Bloc driver
         holder.blocDriver?.setOnClickListener {
             val dateMap = mutableMapOf<String, Any>()
-            dateMap[NAME_DRIVER] = mDriverList[position].name_driver
-            dateMap[UID_DRIVER] = mDriverList[position].uid
-            dateMap[LAST_NAME_DRIVER] = mDriverList[position].last_name_driver
-            dateMap[SURNAME_DRIVER] = mDriverList[position].surname_driver
-            dateMap[PHOTO_DRIVER] = mDriverList[position].photo_driver
-            dateMap[PHOTO_LICENSE] = mDriverList[position].photo_licence
-            dateMap[CAR] = mDriverList[position].car
-            dateMap[CAR_NUMBER] = mDriverList[position].car_number
-            dateMap[PHONE_NUMBER_DRIVER] = mDriverList[position].phone_number_driver
-            REF_DATABASE_ROOT.child(NODE_BLOC_DRIVERS).child(mDriverList[position].uid).updateChildren(dateMap)
+            dateMap[CHILD_BLOC] = BLOCK
+            REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).updateChildren(dateMap)
             showToast(APP_ACTIVITY.getString(R.string.driver_bloc))
-            REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mDriverList[position].uid).removeValue()
         }
     }
 

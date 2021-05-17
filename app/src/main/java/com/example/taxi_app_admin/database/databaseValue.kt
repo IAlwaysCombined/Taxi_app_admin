@@ -30,6 +30,11 @@ const val PHOTO_LICENSE = "photo_license"
 const val PHONE_NUMBER_DRIVER = "phone_number_driver"
 const val UID_DRIVER = "uid"
 const val CHILD_ROLE = "role"
+const val CHILD_BLOC = "bloc"
 
 //Const role
 const val ADMIN_ROLE = "admin"
+
+//Block drivers
+const val BLOCK = "block"
+const val UNBLOCK = "unblock"

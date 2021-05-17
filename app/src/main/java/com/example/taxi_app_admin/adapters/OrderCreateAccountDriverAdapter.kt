@@ -57,6 +57,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[PHOTO_DRIVER] = mOrderList[position].photo_driver
             dateMap[PHOTO_LICENSE] = mOrderList[position].photo_licence
             dateMap[CAR] = mOrderList[position].car
+            dateMap[CHILD_BLOC] = UNBLOCK
             dateMap[CAR_NUMBER] = mOrderList[position].car_number
             dateMap[PHONE_NUMBER_DRIVER] = mOrderList[position].phone_number_driver
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)

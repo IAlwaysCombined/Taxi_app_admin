@@ -13,6 +13,9 @@ data class CommonModel (
     val photo_driver: String = "empty",
     val photo_car_driver: String = "",
     val photo_licence: String = "empty",
+    val bloc: String = "",
+
+
 
     val name_user: String = "",
     val last_name_user: String = "",
