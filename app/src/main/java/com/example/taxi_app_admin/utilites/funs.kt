@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.taxi_app_admin.utilites
 
 import android.app.Activity
@@ -6,6 +8,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.taxi_app_admin.R
 import com.squareup.picasso.Picasso
 
@@ -38,5 +41,10 @@ fun ImageView.downloadAndSetImage(url: String) {
         .fit()
         .placeholder(R.mipmap.ic_launcher)
         .into(this)
+}
+//Back stack fragment
+fun backStack() {
+    val fragment: FragmentManager = APP_ACTIVITY.supportFragmentManager
+    fragment.popBackStack()
 }
 

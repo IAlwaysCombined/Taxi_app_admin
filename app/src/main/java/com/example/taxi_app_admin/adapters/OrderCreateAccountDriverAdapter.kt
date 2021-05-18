@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.database.*
 import com.example.taxi_app_admin.models.CommonModel
+import com.example.taxi_app_admin.ui.fragments.PhotoDriverCarFragment
+import com.example.taxi_app_admin.ui.fragments.PhotoDriverLicenseFragment
 import com.example.taxi_app_admin.utilites.*
 
 
@@ -46,6 +48,12 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
         holder.carNumberDriver?.text = mOrderList[position].car_number
         holder.carDriver?.text = mOrderList[position].car
         holder.photoDriverLicense?.downloadAndSetImage(mOrderList[position].photo_licence)
+        holder.photoDriverLicense?.setOnClickListener {
+            APP_ACTIVITY.replaceFragment(PhotoDriverLicenseFragment(mOrderList[position].photo_licence))
+        }
+        holder.photoDriverCar?.setOnClickListener {
+            APP_ACTIVITY.replaceFragment(PhotoDriverCarFragment(mOrderList[position].photo_car))
+        }
         holder.photoDriver?.downloadAndSetImage(mOrderList[position].photo_driver)
         holder.photoDriverCar?.downloadAndSetImage(mOrderList[position].photo_car)
         //Create driver
