@@ -26,6 +26,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
         //Driver images
         val photoDriver: ImageView? = itemView.findViewById(R.id.driver_image_order_create_account)
         val photoDriverLicense: ImageView? = itemView.findViewById(R.id.car_driver_order_license)
+        val photoDriverCar: ImageView? = itemView.findViewById(R.id.car_driver_order_car)
         //Buttons
         val addDriver: Button? = itemView.findViewById(R.id.add_driver)
         val deleteDriver: Button? = itemView.findViewById(R.id.delete_driver_order)
@@ -46,7 +47,7 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
         holder.carDriver?.text = mOrderList[position].car
         holder.photoDriverLicense?.downloadAndSetImage(mOrderList[position].photo_licence)
         holder.photoDriver?.downloadAndSetImage(mOrderList[position].photo_driver)
-
+        holder.photoDriverCar?.downloadAndSetImage(mOrderList[position].photo_car)
         //Create driver
         holder.addDriver?.setOnClickListener {
             val dateMap = mutableMapOf<String, Any>()

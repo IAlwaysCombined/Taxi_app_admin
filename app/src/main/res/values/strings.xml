@@ -26,14 +26,18 @@
     <string name="bloc_driver_btn_text_drivers">Заблокировать</string>
     <string name="driver_order_deleted">Заявка удалена</string>
     <string name="driver_deleted">Водитель удален</string>
-    <string name="driver_bloc">Водитель заблокирован</string>
+    <string name="block_driver_item_description_text_view">Статус</string>
     <!-- toast -->
     <string name="something_went_wrong_toast">Что-то пошло не так!</string>
     <string name="email_edt_text_not_filled_toast">Заполните поле email</string>
+    <string name="driver_bloc">Водитель заблокирован</string>
+    <string name="driver_unbloc">Водитель разблокирован</string>
     <string name="password_edt_text_not_filled_toast">Заполните поле пароль</string>
     <!-- btn text -->
     <string name="exit_btn_text">Выйти</string>
     <string name="auth_enter_code">Войти</string>
+    <string name="unbloc">Разблокировать</string>
+    <string name="bloc">Заблокировать</string>
     <!-- text view text -->
     <string name="auth_text_view_description_auth_text">Авторизация</string>
     <string name="auth_text_view_restore_password_text">Забыли пароль?</string>
@@ -41,5 +45,4 @@
     <string name="auth_email_edt_text">Email</string>
     <string name="auth_password_edt_text">Пароль</string>
     <string name="auth_enter_btn_text">Войти</string>
-    <string name="block_driver_item_description_text_view">Статус</string>
 </resources>

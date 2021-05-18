@@ -28,10 +28,14 @@
     <string name="driver_order_deleted">Заявка видалена</string>
     <string name="driver_deleted">Водій видалений</string>
     <string name="driver_bloc">Водій заблокований</string>
+    <string name="driver_unbloc">Водій разаблокірован</string>
     <!-- toast -->
     <string name="something_went_wrong_toast">Щось пішло не так!</string>
     <string name="email_edt_text_not_filled_toast">Заповніть поле email</string>
     <string name="password_edt_text_not_filled_toast">Заповніть поле пароль</string>
+    <string name="block_driver_item_description_text_view">Статус</string>
+    <string name="unbloc">Розблокувати</string>
+    <string name="bloc">Заблокувати</string>
     <!-- btn text -->
     <string name="exit_btn_text">Вийти</string>
     <string name="auth_enter_code">Увійти</string>
