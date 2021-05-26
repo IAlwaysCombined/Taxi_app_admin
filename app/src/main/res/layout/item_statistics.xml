@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="560dp"
+    android:layout_height="590dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         style="@style/card_view_style"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
+        android:layout_height="560dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -129,53 +130,80 @@
                 app:layout_constraintTop_toBottomOf="@+id/name_user_ride_item" />
 
             <TextView
-                android:id="@+id/last_name_user_item_ride_description"
+                android:id="@+id/start_location_item_ride_description"
                 style="@style/description_data_text_view_style"
-                android:text="@string/last_name_user_item_description_text_view"
+                android:text="@string/start_location_text_view"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name_user_ride_item" />
 
             <TextView
-                android:id="@+id/last_name_user_ride_item"
+                android:id="@+id/start_location_ride_item"
                 style="@style/data_text_view_style"
-                android:text="Семёнов"
+                android:textSize="8sp"
+                android:text="Проспект победы 16 к 3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/last_name_user_item_ride_description" />
+                app:layout_constraintTop_toBottomOf="@+id/start_location_item_ride_description"
+                tools:ignore="SmallSp" />
 
             <View
                 style="@style/under_line_view_style"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/last_name_user_ride_item" />
+                app:layout_constraintTop_toBottomOf="@+id/stop_location_ride_item" />
 
             <TextView
-                android:id="@+id/surname_user_item_ride_description"
+                android:id="@+id/end_location_item_ride_description"
                 style="@style/description_data_text_view_style"
-                android:text="@string/surname_user_item_description_text_view"
+                android:text="@string/end_location_text_view"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/last_name_user_ride_item" />
+                app:layout_constraintTop_toBottomOf="@+id/start_location_ride_item" />
 
             <TextView
-                android:id="@+id/surname_user_ride_item"
+                android:id="@+id/end_location_ride_item"
                 style="@style/data_text_view_style"
-                android:text="Дмитртевич"
+                android:textSize="8sp"
+                android:text="Проспект победы 16 к 3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/surname_user_item_ride_description" />
+                app:layout_constraintTop_toBottomOf="@+id/end_location_item_ride_description"
+                tools:ignore="SmallSp" />
 
             <View
                 style="@style/under_line_view_style"
                 android:layout_width="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/surname_user_ride_item" />
+                app:layout_constraintTop_toBottomOf="@+id/start_location_ride_item" />
+
+            <TextView
+                android:id="@+id/stop_location_item_ride_description"
+                style="@style/description_data_text_view_style"
+                android:text="@string/stop_location_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_location_ride_item" />
+
+            <TextView
+                android:id="@+id/stop_location_ride_item"
+                style="@style/data_text_view_style"
+                android:textSize="8sp"
+                android:text="Проспект победы 16 к 3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stop_location_item_ride_description"
+                tools:ignore="SmallSp" />
+
+            <View
+                style="@style/under_line_view_style"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_location_ride_item" />
 
             <TextView
                 android:id="@+id/phone_number_user_item_ride_description"
                 style="@style/description_data_text_view_style"
                 android:text="@string/phone_number_user_item_description_text_view"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/surname_user_ride_item" />
+                app:layout_constraintTop_toBottomOf="@+id/stop_location_ride_item" />
 
             <TextView
                 android:id="@+id/phone_number_user_ride_item"

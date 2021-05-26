@@ -31,9 +31,11 @@ const val PHONE_NUMBER_DRIVER = "phone_number_driver"
 const val UID_DRIVER = "uid"
 const val CHILD_ROLE = "role"
 const val CHILD_BLOC = "bloc"
+const val CHILD_EMAIL_DRIVER = "email_driver"
 
 //Const role
 const val ADMIN_ROLE = "admin"
+const val DRIVER_ROLE = "driver"
 
 //Block drivers
 const val BLOCK = "block"

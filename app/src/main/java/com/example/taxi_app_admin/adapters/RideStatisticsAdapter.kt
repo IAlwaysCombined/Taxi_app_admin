@@ -21,8 +21,9 @@ class RideStatisticsAdapter(private var mRideList: MutableList<CommonModel>): Re
         val photoDriver: ImageView? = itemView.findViewById(R.id.driver_image_order_create_account)
         //User data
         val nameUser: TextView? = itemView.findViewById(R.id.name_user_ride_item)
-        val lastNameUser: TextView? = itemView.findViewById(R.id.last_name_user_ride_item)
-        val surnameUser: TextView? = itemView.findViewById(R.id.surname_user_ride_item)
+        val startLocation: TextView? = itemView.findViewById(R.id.start_location_ride_item)
+        val endLocation: TextView? = itemView.findViewById(R.id.end_location_ride_item)
+        val stopLocation: TextView? = itemView.findViewById(R.id.stop_location_ride_item)
         val phoneNumberUser: TextView? = itemView.findViewById(R.id.phone_number_user_ride_item)
         //Ride data
         val coastRide: TextView? = itemView.findViewById(R.id.coast_ride_ride_item)
@@ -39,12 +40,14 @@ class RideStatisticsAdapter(private var mRideList: MutableList<CommonModel>): Re
         holder.nameDriver?.text = mRideList[position].name_driver
         holder.lastNameDriver?.text = mRideList[position].last_name_driver
         holder.surnameDriver?.text = mRideList[position].surname_driver
-        holder.phoneNumberDriver?.text = mRideList[position].phone_number
+        holder.phoneNumberDriver?.text = mRideList[position].phone_number_driver
         holder.photoDriver?.downloadAndSetImage(mRideList[position].photo_driver)
+
         holder.nameUser?.text = mRideList[position].name_user
-        holder.lastNameUser?.text = mRideList[position].last_name_user
-        holder.surnameUser?.text = mRideList[position].surname_user
-        holder.phoneNumberUser?.text = mRideList[position].phone_number_user
+        holder.startLocation?.text = mRideList[position].start_ride
+        holder.endLocation?.text = mRideList[position].end_ride
+        holder.stopLocation?.text = mRideList[position].center_ride
+        holder.phoneNumberUser?.text = mRideList[position].phone_user
         holder.coastRide?.text = mRideList[position].coast_ride
         holder.payMethod?.text = mRideList[position].pay_method
     }

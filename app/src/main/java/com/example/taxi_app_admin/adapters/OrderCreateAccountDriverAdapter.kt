@@ -68,6 +68,8 @@ class OrderCreateAccountDriverAdapter(private var mOrderList: MutableList<Common
             dateMap[CAR] = mOrderList[position].car
             dateMap[CHILD_BLOC] = UNBLOCK
             dateMap[CAR_NUMBER] = mOrderList[position].car_number
+            dateMap[CHILD_ROLE] = DRIVER_ROLE
+            dateMap[CHILD_EMAIL_DRIVER] = mOrderList[position].email_driver
             dateMap[PHONE_NUMBER_DRIVER] = mOrderList[position].phone_number_driver
             REF_DATABASE_ROOT.child(NODE_DRIVERS).child(mOrderList[position].uid).updateChildren(dateMap)
             showToast(APP_ACTIVITY.getString(R.string.driver_created_toast))
