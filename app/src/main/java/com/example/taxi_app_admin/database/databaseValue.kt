@@ -17,7 +17,7 @@ const val NODE_ORDER_DRIVERS = "order_drivers"
 const val NODE_DRIVERS = "driver"
 const val NODE_ADMIN = "admin"
 const val NODE_RIDES = "rides"
-const val NODE_BLOC_DRIVERS = "bloc_drive"
+const val NODE_RIDES_FOR_ADMIN = "rides_for_admin"
 
 //Child object
 const val NAME_DRIVER = "name_driver"

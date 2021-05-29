@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taxi_app_admin.R
 import com.example.taxi_app_admin.adapters.RideStatisticsAdapter
 import com.example.taxi_app_admin.database.NODE_RIDES
+import com.example.taxi_app_admin.database.NODE_RIDES_FOR_ADMIN
 import com.example.taxi_app_admin.database.REF_DATABASE_ROOT
 import com.example.taxi_app_admin.database.getCommonModel
 import com.example.taxi_app_admin.databinding.FragmentRideStatisticsBinding
@@ -37,7 +38,7 @@ class RideStatisticsFragment(private val drives: CommonModel) : Fragment(R.layou
     private fun initRecyclerView(){
         recyclerView = binding.statisticsRidesRecyclerView
         adapter = RideStatisticsAdapter(mutableListOf())
-        refOrders = REF_DATABASE_ROOT.child(NODE_RIDES).child(drives.id)
+        refOrders = REF_DATABASE_ROOT.child(NODE_RIDES_FOR_ADMIN).child(drives.id)
         recyclerView.adapter = adapter
         orderRequestListener = AppValueEventListener { dataSnapshot ->
             rideRequestList = dataSnapshot.children.map { it.getCommonModel() } as MutableList<CommonModel>

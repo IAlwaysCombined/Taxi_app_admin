@@ -3,6 +3,7 @@ package com.example.taxi_app_admin.models
 //Common model
 data class CommonModel (
     val id: String = "",
+    val id_rides: String = "",
     val uid: String = "",
     val name_driver: String = "",
     val last_name_driver: String = "",
